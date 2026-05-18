@@ -245,6 +245,174 @@ const JobAlerts = () => {
         </div>
       </div>
 
+      {/* FOOTER SECTION */}
+
+<footer className="footer-section">
+
+  <div className="footer-container">
+
+    {/* LEFT LOGO AREA */}
+
+    <div className="footer-logo-area">
+
+      <img
+        src="https://static.thenounproject.com/png/2505707-200.png"
+        alt="logo"
+        className="footer-logo"
+      />
+
+      <p>Great career starts here!</p>
+
+      <h4>Download Shine App</h4>
+
+      <div className="footer-app-icons">
+
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+          alt="google-play"
+        />
+
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg"
+          alt="apple"
+          className="apple-icon"
+        />
+
+      </div>
+
+    </div>
+
+    {/* JOB SEEKERS */}
+
+    <div className="footer-column">
+
+      <h3>JOB SEEKERS</h3>
+
+      <ul>
+
+        <li>Register / Login</li>
+        <li>Job Search</li>
+        <li>Create Free Job Alert</li>
+        <li>Job Assistance Services</li>
+        <li>Courses</li>
+        <li>Fraud Alert</li>
+
+      </ul>
+
+      <h3 className="footer-space-top">EMPLOYERS</h3>
+
+      <ul>
+
+        <li>Recruiter India</li>
+        <li>Post Job</li>
+
+      </ul>
+
+    </div>
+
+    {/* TRENDING BLOGS */}
+
+    <div className="footer-column">
+
+      <h3>TRENDING BLOGS</h3>
+
+      <ul>
+
+        <li>How to Write a Cover Letter fo...</li>
+        <li>Marriage Leave Application: S...</li>
+        <li>Authorization Letter: Format a...</li>
+        <li>How to write an application for ...</li>
+        <li className="view-more">View More</li>
+
+      </ul>
+
+      <h3 className="footer-space-top">TRENDING JOBS</h3>
+
+      <ul>
+
+        <li>Fresher Work From Home Mo...</li>
+        <li>Work From Home Jobs</li>
+        <li>Work From Home Jobs In Hyd...</li>
+        <li>Data Entry Work From Home ...</li>
+        <li className="view-more">View More</li>
+
+      </ul>
+
+    </div>
+
+    {/* PARTNER SITES */}
+
+    <div className="footer-column">
+
+      <h3>PARTNER SITES</h3>
+
+      <ul>
+
+        <li>Hindustantimes.com</li>
+        <li>Livemint.com</li>
+        <li>Livehindustan.com</li>
+        <li>OTTplay.com</li>
+        <li>Commercial Radio - FAB Play</li>
+
+      </ul>
+
+    </div>
+
+    {/* CONTACT US */}
+
+    <div className="footer-column">
+
+      <h3>CONTACT US</h3>
+
+      <ul>
+
+        <li>080-1006 2222</li>
+        <li>contactus@shine.com</li>
+
+      </ul>
+
+      <div className="footer-social-icons">
+
+        <span>in</span>
+        <span>📷</span>
+        <span>f</span>
+        <span>▶</span>
+        <span>𝕏</span>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  {/* BOTTOM FOOTER */}
+
+  <div className="footer-bottom">
+
+    <div className="footer-bottom-links">
+
+      <span>Feedback</span>
+      <span>FAQs</span>
+      <span>About Us</span>
+      <span>Contact Us</span>
+      <span>Privacy Policy</span>
+      <span>Cookie Policy</span>
+      <span>Business News</span>
+      <span>English News</span>
+      <span>Terms & Conditions</span>
+      <span>Disclaimer</span>
+      <span>Report a Job Posting</span>
+
+    </div>
+
+    <div className="footer-copy">
+      © 2026 HT Media Limited
+    </div>
+
+  </div>
+
+</footer>
+
       {/* TOAST NOTIFICATION */}
       {showToast && (
         <div className="job-alert-toast">
