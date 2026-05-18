@@ -1,0 +1,486 @@
+/* =========================
+   SERVICE PAGE MAIN
+========================= */
+
+.service-page {
+  min-height: 100vh;
+  padding: 40px 20px;
+  background:
+    radial-gradient(circle at top left, #eef2ff 0%, transparent 30%),
+    radial-gradient(circle at bottom right, #ffe4f1 0%, transparent 30%),
+    linear-gradient(135deg, #f8fafc, #eef2ff);
+
+  font-family: "Poppins", sans-serif;
+  animation: fadeInPage 0.8s ease;
+}
+
+/* =========================
+   HEADER SECTION
+========================= */
+
+.service-header {
+  max-width: 1200px;
+  margin: auto;
+  padding: 60px 30px;
+  border-radius: 28px;
+
+  color: white;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+
+  box-shadow:
+    0 15px 40px rgba(0, 0, 0, 0.12),
+    inset 0 1px 2px rgba(255, 255, 255, 0.3);
+
+  animation: slideTop 0.8s ease;
+}
+
+/* Animated Background Glow */
+.service-header::before {
+  content: "";
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+  top: -120px;
+  right: -100px;
+  animation: pulseGlow 5s infinite linear;
+}
+
+.service-header::after {
+  content: "";
+  position: absolute;
+  width: 280px;
+  height: 280px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 50%;
+  bottom: -80px;
+  left: -80px;
+}
+
+/* =========================
+   ICON
+========================= */
+
+.service-icon {
+  font-size: 70px;
+  margin-bottom: 20px;
+  animation: floatIcon 3s ease-in-out infinite;
+}
+
+/* =========================
+   HEADER TEXT
+========================= */
+
+.service-header h1 {
+  font-size: 48px;
+  margin-bottom: 14px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.service-header p {
+  font-size: 18px;
+  opacity: 0.95;
+  max-width: 700px;
+  margin: auto;
+  line-height: 1.7;
+}
+
+/* =========================
+   CONTENT SECTION
+========================= */
+
+.service-content {
+  max-width: 1200px;
+  margin: 50px auto 0;
+
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 35px;
+}
+
+/* =========================
+   INFO CARD
+========================= */
+
+.service-info {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(14px);
+
+  border-radius: 24px;
+  padding: 35px;
+
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.08),
+    inset 0 1px 1px rgba(255, 255, 255, 0.4);
+
+  animation: fadeLeft 1s ease;
+}
+
+.service-info h2 {
+  font-size: 30px;
+  margin-bottom: 30px;
+  color: #1f2937;
+  position: relative;
+}
+
+.service-info h2::after {
+  content: "";
+  position: absolute;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(to right, #6366f1, #ec4899);
+  left: 0;
+  bottom: -10px;
+  border-radius: 10px;
+}
+
+/* =========================
+   FEATURES LIST
+========================= */
+
+.features-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.features-list li {
+  display: flex;
+  align-items: center;
+
+  background: white;
+  padding: 18px 20px;
+  margin-bottom: 18px;
+
+  border-radius: 16px;
+  font-size: 16px;
+  color: #374151;
+
+  transition: all 0.35s ease;
+
+  box-shadow:
+    0 6px 16px rgba(0, 0, 0, 0.05);
+}
+
+.features-list li:hover {
+  transform: translateX(8px) scale(1.02);
+  box-shadow:
+    0 10px 24px rgba(99, 102, 241, 0.15);
+}
+
+.check {
+  width: 34px;
+  height: 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-right: 16px;
+
+  border-radius: 50%;
+  font-size: 16px;
+  font-weight: bold;
+
+  color: white;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+}
+
+/* =========================
+   PRICING CARD
+========================= */
+
+.service-pricing {
+  animation: fadeRight 1s ease;
+}
+
+.price-card {
+  position: sticky;
+  top: 30px;
+
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(16px);
+
+  border-radius: 24px;
+  padding: 40px 30px;
+  text-align: center;
+
+  box-shadow:
+    0 15px 35px rgba(0, 0, 0, 0.08);
+
+  overflow: hidden;
+}
+
+/* Gradient Glow */
+.price-card::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: 26px;
+  background: linear-gradient(
+    135deg,
+    #6366f1,
+    #8b5cf6,
+    #ec4899,
+    #06b6d4
+  );
+  z-index: -1;
+  opacity: 0.15;
+}
+
+.price-card h3 {
+  font-size: 26px;
+  color: #111827;
+  margin-bottom: 20px;
+}
+
+.price {
+  font-size: 54px;
+  font-weight: 700;
+  margin-bottom: 20px;
+
+  background: linear-gradient(135deg, #6366f1, #ec4899);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.duration {
+  margin-bottom: 30px;
+  color: #6b7280;
+  font-size: 16px;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.buy-now-btn,
+.back-home-btn {
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.35s ease;
+}
+
+/* BUY BUTTON */
+
+.buy-now-btn {
+  width: 100%;
+  padding: 16px;
+
+  border-radius: 16px;
+  font-size: 17px;
+  color: white;
+
+  background: linear-gradient(
+    135deg,
+    #6366f1,
+    #8b5cf6,
+    #ec4899
+  );
+
+  box-shadow:
+    0 12px 28px rgba(99, 102, 241, 0.3);
+
+  position: relative;
+  overflow: hidden;
+}
+
+.buy-now-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.25);
+  transform: skewX(-25deg);
+  transition: all 0.7s ease;
+}
+
+.buy-now-btn:hover::before {
+  left: 120%;
+}
+
+.buy-now-btn:hover {
+  transform: translateY(-4px) scale(1.03);
+  box-shadow:
+    0 18px 36px rgba(99, 102, 241, 0.4);
+}
+
+.buy-now-btn:active {
+  transform: scale(0.97);
+}
+
+/* GUARANTEE */
+
+.guarantee {
+  margin-top: 18px;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+/* BACK BUTTON */
+
+.back-home-btn {
+  display: block;
+  margin: 50px auto 0;
+
+  padding: 14px 28px;
+  border-radius: 14px;
+
+  background: white;
+  color: #374151;
+
+  box-shadow:
+    0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.back-home-btn:hover {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  color: white;
+  transform: translateY(-3px);
+}
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes fadeInPage {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideTop {
+  from {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes floatIcon {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes pulseGlow {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 992px) {
+  .service-content {
+    grid-template-columns: 1fr;
+  }
+
+  .price-card {
+    position: relative;
+    top: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .service-header {
+    padding: 45px 20px;
+  }
+
+  .service-header h1 {
+    font-size: 34px;
+  }
+
+  .service-header p {
+    font-size: 16px;
+  }
+
+  .service-icon {
+    font-size: 54px;
+  }
+
+  .service-info,
+  .price-card {
+    padding: 25px;
+  }
+
+  .price {
+    font-size: 42px;
+  }
+
+  .features-list li {
+    font-size: 15px;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .service-page {
+    padding: 20px 12px;
+  }
+
+  .service-header h1 {
+    font-size: 28px;
+  }
+
+  .buy-now-btn {
+    font-size: 15px;
+  }
+}

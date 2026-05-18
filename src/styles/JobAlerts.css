@@ -1,0 +1,146 @@
+/* FREE JOB ALERT SECTION */
+
+.free-job-alert-section {
+  padding: 70px 20px;
+  background: #f7f7f7;
+}
+
+.free-job-alert-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+/* LEFT */
+
+.free-job-alert-left {
+  flex: 1;
+}
+
+.free-job-alert-left h2 {
+  font-size: 42px;
+  font-weight: 700;
+  color: #1f2b4d;
+  margin-bottom: 10px;
+}
+
+.free-job-alert-subtitle {
+  font-size: 18px;
+  margin-bottom: 25px;
+  color: #444;
+}
+
+.free-job-alert-card {
+  background: #fff;
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.free-job-alert-text {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 25px;
+}
+
+.free-job-alert-card input {
+  width: 100%;
+  height: 58px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 0 18px;
+  margin-bottom: 18px;
+  font-size: 16px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.free-job-alert-card input:focus {
+  border-color: #5b3df5;
+}
+
+.free-job-alert-card button {
+  width: 100%;
+  height: 56px;
+  border: none;
+  border-radius: 10px;
+  background: #5b3df5;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+.free-job-alert-card button:hover {
+  background: #4728e2;
+}
+
+/* RIGHT FAQ */
+
+.free-job-alert-right {
+  width: 420px;
+}
+
+.faq-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.faq-card h3 {
+  font-size: 36px;
+  color: #1f2b4d;
+  margin-bottom: 25px;
+}
+
+.faq-item {
+  padding: 20px 0;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.faq-question {
+  font-size: 22px;
+  font-weight: 600;
+  color: #1f2b4d;
+  cursor: pointer;
+}
+
+.faq-answer {
+  margin-top: 15px;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #555;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 992px) {
+
+  .free-job-alert-container {
+    flex-direction: column;
+  }
+
+  .free-job-alert-right {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .free-job-alert-left h2 {
+    font-size: 32px;
+  }
+
+  .faq-card h3 {
+    font-size: 28px;
+  }
+
+  .faq-question {
+    font-size: 18px;
+  }
+}

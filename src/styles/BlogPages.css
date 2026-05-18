@@ -1,0 +1,88 @@
+/* BlogPages.css */
+.blog-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 100px 20px 60px;
+}
+
+.blog-header {
+  text-align: center;
+  color: white;
+  margin-bottom: 50px;
+}
+
+.blog-icon {
+  font-size: 64px;
+  margin-bottom: 20px;
+}
+
+.blog-header h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.blog-header p {
+  font-size: 18px;
+  opacity: 0.9;
+}
+
+.blog-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+  padding: 20px;
+}
+
+.blog-card {
+  background: white;
+  border-radius: 15px;
+  padding: 25px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.blog-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.blog-card h3 {
+  color: #333;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.read-time {
+  color: #667eea;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.read-more-btn {
+  background: #667eea;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.read-more-btn:hover {
+  background: #5a67d8;
+}
+
+.back-home-btn {
+  display: block;
+  margin: 40px auto;
+  padding: 12px 24px;
+  background: white;
+  color: #667eea;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+}

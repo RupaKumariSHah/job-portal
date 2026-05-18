@@ -1,0 +1,916 @@
+/* =========================
+   MAIN PAGE
+========================= */
+
+.recruiter-page {
+  min-height: 100vh;
+  background: #f5f5f5;
+  font-family: "Poppins", sans-serif;
+}
+
+/* =========================
+   TOP BANNER
+========================= */
+
+.rp-top-banner {
+background: linear-gradient(90deg, #ed3a3a85, #0d4d8b);
+
+  color: white;
+  padding: 22px 40px;
+}
+
+.rp-banner-content {
+  max-width: 1450px;
+  margin: auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rp-banner-left h3 {
+  font-size: 22px;
+  margin-bottom: 8px;
+}
+
+.rp-banner-left p {
+  font-size: 20px;
+}
+
+.rp-banner-left span {
+  font-weight: 700;
+  background: white;
+  color: black;
+  padding: 3px 12px;
+  border-radius: 4px;
+}
+
+.rp-close-btn {
+  border: none;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.rp-header {
+  background: white;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 25px 40px;
+
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+/* LOGO */
+
+.rp-logo-section {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.rp-logo-circle {
+  width: 58px;
+  height: 58px;
+
+  border-radius: 50%;
+  border: 5px solid #facc15;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rp-logo-circle span {
+  font-size: 28px;
+  font-weight: 700;
+  color: #172554;
+}
+
+.rp-logo-text {
+  font-size: 34px;
+  color: #172554;
+}
+
+/* NAVBAR */
+
+.rp-navbar {
+  display: flex;
+  gap: 45px;
+}
+
+.rp-navbar a {
+  text-decoration: none;
+  color: #111827;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.rp-navbar a:hover {
+  color: #7c3aed;
+}
+
+/* RIGHT */
+
+.rp-header-right {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.rp-login-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 12px 24px;
+
+  border: 2px solid #7c3aed;
+  background: white;
+  color: #7c3aed;
+
+  border-radius: 10px;
+
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.rp-contact {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.rp-contact h4 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.rp-contact p {
+  margin: 0;
+  font-size: 14px;
+  color: #4b5563;
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.rp-hero-section {
+  background: #f2edf9;
+
+  display: grid;
+  grid-template-columns: 1.3fr 0.8fr;
+
+  gap: 60px;
+
+  align-items: center;
+
+  padding: 70px 60px;
+}
+
+/* LEFT */
+
+.rp-left h1 {
+  font-size: 36px;
+  line-height: 1.1;
+  color: #1f2237;
+  margin-bottom: 30px;
+}
+
+.rp-left span {
+  color: #f59e0b;
+}
+
+.rp-left p {
+  font-size: 34px;
+  color: #374151;
+  margin-bottom: 40px;
+}
+
+/* BUTTONS */
+
+.rp-buttons {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.rp-yellow-btn,
+.rp-purple-btn,
+.rp-outline-btn {
+  padding: 18px 32px;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.rp-yellow-btn {
+  background: #f59e0b;
+  border: none;
+  color: white;
+}
+
+.rp-purple-btn {
+  background: #7c3aed;
+  border: none;
+  color: white;
+}
+
+.rp-outline-btn {
+  background: white;
+  border: 2px solid #7c3aed;
+  color: #7c3aed;
+}
+
+/* =========================
+   FORM CARD
+========================= */
+
+.rp-form-card {
+  background: white;
+
+  padding: 35px;
+
+  border-radius: 16px;
+
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+}
+
+.rp-form-card h2 {
+  font-size: 42px;
+  margin-bottom: 30px;
+  color: #1f2237;
+}
+
+.rp-form-card input,
+.rp-form-card select {
+  width: 100%;
+  padding: 16px;
+
+  margin-bottom: 18px;
+
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+
+  font-size: 16px;
+}
+
+/* RADIO */
+
+.rp-radio-group {
+  display: flex;
+  gap: 25px;
+  margin-bottom: 20px;
+}
+
+.rp-radio-group label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.rp-demo-btn {
+  width: 100%;
+  padding: 16px;
+
+  border: none;
+  background: #7c3aed;
+  color: white;
+
+  border-radius: 12px;
+
+  font-size: 18px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+/* =========================
+   COOKIE BAR
+========================= */
+
+.rp-cookie-bar {
+  position: fixed;
+  bottom: 0;
+
+  width: 100%;
+
+  background: #d7c8f5;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+
+  padding: 18px 30px;
+
+  z-index: 999;
+}
+
+.rp-cookie-bar p {
+  margin: 0;
+  font-size: 16px;
+}
+
+.rp-cookie-bar span {
+  color: #7c3aed;
+  font-weight: 600;
+}
+
+.rp-cookie-bar button {
+  padding: 10px 20px;
+
+  border: none;
+  background: #7c3aed;
+  color: white;
+
+  border-radius: 8px;
+
+  cursor: pointer;
+}
+
+/* =========================
+   CHAT BUTTON
+========================= */
+
+.rp-chat-btn {
+  position: fixed;
+  bottom: 90px;
+  right: 30px;
+
+  width: 70px;
+  height: 70px;
+
+  border-radius: 50%;
+  border: none;
+
+  background: #4f46e5;
+  color: white;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1100px) {
+
+  .rp-hero-section {
+    grid-template-columns: 1fr;
+  }
+
+  .rp-left h1 {
+    font-size: 52px;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .rp-header {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .rp-navbar {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .rp-topbar-right {
+    justify-content: center;
+  }
+
+  .rp-left h1 {
+    font-size: 40px;
+  }
+
+  .rp-left p {
+    font-size: 24px;
+  }
+
+  .rp-cookie-bar {
+    flex-direction: column;
+    text-align: center;
+  }
+
+}
+
+/* =========================
+   COMPANIES SECTION
+========================= */
+
+.rp-companies-section {
+  padding: 90px 0;
+  background: #f7f7f7;
+  overflow: hidden;
+}
+
+.rp-companies-container h2 {
+  text-align: center;
+  font-size: 44px;
+  font-weight: 700;
+  color: #1f2237;
+  margin-bottom: 60px;
+}
+
+/* =========================
+   MARQUEE
+========================= */
+
+.rp-marquee {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.rp-marquee-track {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  width: max-content;
+
+  animation: marqueeScroll 25s linear infinite;
+}
+
+/* LOGOS */
+
+.rp-marquee-track img {
+  width: 170px;
+  height: 90px;
+  object-fit: contain;
+
+  filter: grayscale(100%);
+  opacity: 0.8;
+
+  transition: all 0.4s ease;
+}
+
+.rp-marquee-track img:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+  transform: scale(1.08);
+}
+
+/* ANIMATION */
+
+@keyframes marqueeScroll {
+
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 992px) {
+
+  .rp-companies-container h2 {
+    font-size: 42px;
+  }
+
+  .rp-marquee-track {
+    gap: 50px;
+  }
+
+  .rp-marquee-track img {
+    width: 130px;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .rp-companies-container h2 {
+    font-size: 32px;
+  }
+
+  .rp-marquee-track {
+    gap: 35px;
+  }
+
+  .rp-marquee-track img {
+    width: 100px;
+    height: 70px;
+  }
+
+}
+
+/* =========================
+   SERVICES SECTION
+========================= */
+
+.rp-services-section {
+  padding: 100px 40px;
+  background: #f7f7f7;
+}
+
+.rp-services-container {
+  max-width: 1400px;
+  margin: auto;
+}
+
+/* TITLE */
+
+.rp-services-container h2 {
+  text-align: center;
+  font-size: 44px;
+  font-weight: 700;
+  color: #1f2237;
+  margin-bottom: 70px;
+}
+
+/* =========================
+   GRID
+========================= */
+
+.rp-services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+/* =========================
+   CARD
+========================= */
+
+.rp-service-card {
+  background: white;
+  border-radius: 24px;
+  padding: 50px 40px;
+
+  text-align: center;
+
+  box-shadow:
+    0 10px 35px rgba(0, 0, 0, 0.06);
+
+  transition: all 0.4s ease;
+
+  position: relative;
+  overflow: hidden;
+}
+
+/* TOP BORDER ANIMATION */
+
+.rp-service-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 0%;
+  height: 5px;
+
+  background: linear-gradient(
+    90deg,
+    #7c3aed,
+    #f59e0b
+  );
+
+  transition: 0.5s ease;
+}
+
+.rp-service-card:hover::before {
+  width: 100%;
+}
+
+.rp-service-card:hover {
+  transform: translateY(-12px);
+
+  box-shadow:
+    0 18px 45px rgba(0, 0, 0, 0.12);
+}
+
+/* =========================
+   ICON
+========================= */
+
+.rp-service-icon {
+  width: 95px;
+  height: 95px;
+
+  margin: auto auto 30px;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 42px;
+
+  transition: 0.4s ease;
+}
+
+/* ICON COLORS */
+
+.yellow {
+  background: #fde7b2;
+  color: #d97706;
+}
+
+.green {
+  background: #c9f7ec;
+  color: #059669;
+}
+
+.purple {
+  background: #efd7ff;
+  color: #9333ea;
+}
+
+/* HOVER EFFECT */
+
+.rp-service-card:hover .rp-service-icon {
+  transform: scale(1.1) rotate(8deg);
+}
+
+/* =========================
+   TEXT
+========================= */
+
+.rp-service-card h3 {
+  font-size: 34px;
+  color: #1f2237;
+  margin-bottom: 18px;
+  font-weight: 700;
+}
+
+.rp-service-card p {
+  font-size: 19px;
+  line-height: 1.8;
+  color: #4b5563;
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+.rp-demo-center {
+  text-align: center;
+  margin-top: 70px;
+}
+
+.rp-demo-center button {
+  background: linear-gradient(
+    135deg,
+    #f59e0b,
+    #ffb300
+  );
+
+  color: white;
+  border: none;
+
+  padding: 18px 42px;
+
+  font-size: 20px;
+  font-weight: 700;
+
+  border-radius: 12px;
+
+  cursor: pointer;
+
+  transition: all 0.4s ease;
+
+  box-shadow:
+    0 10px 25px rgba(245, 158, 11, 0.3);
+}
+
+.rp-demo-center button:hover {
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 15px 35px rgba(245, 158, 11, 0.45);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 992px) {
+
+  .rp-services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .rp-services-container h2 {
+    font-size: 48px;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .rp-services-section {
+    padding: 70px 20px;
+  }
+
+  .rp-services-container h2 {
+    font-size: 36px;
+  }
+
+  .rp-service-card {
+    padding: 35px 25px;
+  }
+
+  .rp-service-card h3 {
+    font-size: 28px;
+  }
+
+  .rp-service-card p {
+    font-size: 16px;
+  }
+
+  .rp-demo-center button {
+    width: 100%;
+    font-size: 18px;
+  }
+
+}
+
+
+/* Container Layout */
+.rp-insights-section {
+  background-color: #f4f6f9;
+  padding: 40px 20px;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+.rp-insights-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.rp-insights-title {
+  text-align: center;
+  font-size: 2.2rem;
+  color: #1e293b;
+  margin-bottom: 30px;
+  font-weight: 700;
+}
+
+/* Grid Breakdown */
+.rp-insights-grid {
+  display: grid;
+  grid-template-columns: 2.5fr 1fr;
+  gap: 1px; /* Emulates border look */
+  background-color: #e2e8f0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+/* Left main panel banner */
+.rp-insights-banner {
+  background: radial-gradient(circle at bottom right, #e0f2fe, #ffffff);
+  padding: 45px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 380px;
+}
+
+.rp-banner-content h2 {
+  font-size: 2.4rem;
+  color: #111827;
+  font-weight: 800;
+  max-width: 550px;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.rp-banner-link {
+  color: #1d4ed8;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1.15rem;
+}
+
+.rp-banner-link:hover {
+  text-decoration: underline;
+}
+
+/* Sidebar structure */
+.rp-insights-sidebar {
+  background-color: #111827;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+}
+
+.rp-sidebar-header {
+  background-color: #1e3a8a;
+  padding: 15px 20px;
+}
+
+.rp-sidebar-header h3 {
+  font-size: 1.1rem;
+  margin: 0 0 4px 0;
+}
+
+.rp-sidebar-header p {
+  font-size: 0.85rem;
+  opacity: 0.9;
+  margin: 0;
+}
+
+.rp-sidebar-subtext {
+  font-size: 0.75rem;
+  opacity: 0.7;
+}
+
+/* Sidebar Feed Cards */
+.rp-sidebar-item {
+  padding: 15px 20px;
+  border-bottom: 1px solid #374151;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1f2937;
+}
+
+.rp-sidebar-item.active {
+  background-color: #374151;
+}
+
+.rp-sidebar-item.dark {
+  background-color: #0f172a;
+  border-bottom: none;
+}
+
+.rp-sidebar-item h4 {
+  font-size: 0.9rem;
+  margin: 0 0 6px 0;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.rp-item-meta {
+  font-size: 0.75rem;
+  color: #9ca3af;
+}
+
+.rp-download-btn {
+  background: transparent;
+  border: none;
+  color: #9ca3af;
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+
+.rp-download-btn:hover {
+  color: #fff;
+}
+
+/* Bottom CTA button configuration */
+.rp-insights-action {
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+}
+
+.rp-orange-btn {
+  background-color: #f59e0b;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.rp-orange-btn:hover {
+  background-color: #d97706;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .rp-insights-grid {
+    grid-template-columns: 1fr;
+  }
+}
