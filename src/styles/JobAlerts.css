@@ -20,7 +20,7 @@
 }
 
 .free-job-alert-left h2 {
-  font-size: 42px;
+  font-size: 32px;
   font-weight: 700;
   color: #1f2b4d;
   margin-bottom: 10px;
@@ -43,6 +43,7 @@
   font-size: 16px;
   color: #555;
   margin-bottom: 25px;
+  line-height: 1.6;
 }
 
 .free-job-alert-card input {
@@ -55,14 +56,17 @@
   font-size: 16px;
   outline: none;
   box-sizing: border-box;
+  transition: all 0.3s ease;
 }
 
 .free-job-alert-card input:focus {
   border-color: #5b3df5;
+  box-shadow: 0 0 0 3px rgba(91, 61, 245, 0.1);
 }
 
 .free-job-alert-card button {
   width: 100%;
+  max-width: 200px;
   height: 56px;
   border: none;
   border-radius: 10px;
@@ -72,11 +76,17 @@
   font-weight: 600;
   cursor: pointer;
   margin-top: 10px;
-  transition: 0.3s;
+  transition: all 0.3s ease;
 }
 
 .free-job-alert-card button:hover {
   background: #4728e2;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(91, 61, 245, 0.3);
+}
+
+.free-job-alert-card button:active {
+  transform: translateY(0);
 }
 
 /* RIGHT FAQ */
@@ -93,7 +103,7 @@
 }
 
 .faq-card h3 {
-  font-size: 36px;
+  font-size: 28px;
   color: #1f2b4d;
   margin-bottom: 25px;
 }
@@ -101,13 +111,32 @@
 .faq-item {
   padding: 20px 0;
   border-bottom: 1px solid #e5e5e5;
+  cursor: pointer;
+}
+
+.faq-item:last-child {
+  border-bottom: none;
 }
 
 .faq-question {
-  font-size: 22px;
+  font-size: 18px;
   font-weight: 600;
   color: #1f2b4d;
   cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: color 0.3s ease;
+}
+
+.faq-question:hover {
+  color: #5b3df5;
+}
+
+.faq-icon {
+  font-size: 24px;
+  font-weight: 400;
+  color: #5b3df5;
 }
 
 .faq-answer {
@@ -115,12 +144,101 @@
   font-size: 16px;
   line-height: 1.7;
   color: #555;
+  animation: fadeIn 0.3s ease;
 }
 
-/* RESPONSIVE */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* JOB ALERT CONTENT SECTION */
+
+.job-alert-content-section {
+  padding: 60px 20px;
+  background: #ffffff;
+}
+
+.job-alert-content-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.job-alert-content-container h1 {
+  font-size: 36px;
+  color: #1f2b4d;
+  margin-bottom: 25px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.job-alert-content-container h2 {
+  font-size: 28px;
+  color: #1f2b4d;
+  margin: 40px 0 20px;
+  font-weight: 600;
+}
+
+.job-alert-content-container p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+.job-alert-content-container ul {
+  margin: 20px 0;
+  padding-left: 30px;
+}
+
+.job-alert-content-container li {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 15px;
+}
+
+.job-alert-content-container li strong {
+  color: #5b3df5;
+}
+
+/* TOAST NOTIFICATION */
+
+.job-alert-toast {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #2ecc71;
+  color: white;
+  padding: 15px 25px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  animation: slideInRight 0.3s ease;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* RESPONSIVE DESIGN */
 
 @media (max-width: 992px) {
-
   .free-job-alert-container {
     flex-direction: column;
   }
@@ -128,19 +246,95 @@
   .free-job-alert-right {
     width: 100%;
   }
-}
 
-@media (max-width: 768px) {
-
-  .free-job-alert-left h2 {
+  .job-alert-content-container h1 {
     font-size: 32px;
   }
 
-  .faq-card h3 {
+  .job-alert-content-container h2 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .free-job-alert-section {
+    padding: 40px 20px;
+  }
+
+  .free-job-alert-left h2 {
     font-size: 28px;
   }
 
+  .faq-card h3 {
+    font-size: 24px;
+  }
+
   .faq-question {
-    font-size: 18px;
+    font-size: 16px;
+  }
+
+  .free-job-alert-card {
+    padding: 20px;
+  }
+
+  .free-job-alert-card input {
+    height: 50px;
+    font-size: 14px;
+  }
+
+  .free-job-alert-card button {
+    width: 100%;
+    height: 50px;
+    font-size: 16px;
+  }
+
+  .job-alert-content-container h1 {
+    font-size: 28px;
+  }
+
+  .job-alert-content-container h2 {
+    font-size: 22px;
+  }
+
+  .job-alert-content-container p,
+  .job-alert-content-container li {
+    font-size: 15px;
+  }
+
+  .job-alert-toast {
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .free-job-alert-left h2 {
+    font-size: 24px;
+  }
+
+  .free-job-alert-subtitle {
+    font-size: 16px;
+  }
+
+  .free-job-alert-text {
+    font-size: 14px;
+  }
+
+  .faq-card h3 {
+    font-size: 22px;
+  }
+
+  .faq-question {
+    font-size: 14px;
+  }
+
+  .job-alert-content-container h1 {
+    font-size: 24px;
+  }
+
+  .job-alert-content-container h2 {
+    font-size: 20px;
   }
 }
