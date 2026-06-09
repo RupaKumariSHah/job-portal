@@ -12,6 +12,7 @@ export default function JobPortalEnhanced() {
   const [showJobsPage, setShowJobsPage] = useState(false);
   const [currentCategory, setCurrentCategory] = useState('');
   const [searchTerm, setSearchTerm] = useState('');
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   // Search Box States
   const [skill, setSkill] = useState("");

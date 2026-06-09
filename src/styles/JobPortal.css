@@ -149,27 +149,29 @@ body {
   line-height: 1.3;
 }
 
-/* Responsive Dropdown */
 @media (max-width: 992px) {
-  .nav-links {
+  .search-container {
+    width: 95%;
     flex-direction: column;
-    gap: 10px;
+    border-radius: 30px;
+  }
+  
+  .search-box {
     width: 100%;
+    height: 60px;
+    border-right: none;
+    border-bottom: 1px solid #e5e5e5;
+    padding: 0 16px;
   }
   
-  .nav-dropdown {
+  .search-box:last-child {
+    border-bottom: none;
+  }
+  
+  .search-btn {
     width: 100%;
-  }
-  
-  .dropdown-menu {
-    position: static;
-    box-shadow: none;
-    padding-left: 20px;
-    animation: none;
-  }
-  
-  .dropdown-item:hover {
-    transform: translateX(10px);
+    height: 55px;
+    border-radius: 0 0 30px 30px;
   }
 }
 
@@ -180,27 +182,7 @@ body {
     opacity: 1;
     width: var(--size-1);
 }
-/* .nav-links-enhanced {
-  display: flex;
-  gap: 2rem;
-} */
 
-/* .nav-links-enhanced a {
-  text-decoration: none;
-  color: #333;
-  font-weight: 500;
-  transition: color 0.3s;
-}
-
-.nav-links-enhanced a:hover {
-  color: #f6d74a;
-}
-
-.nav-right {
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-} */
 
 .btn-outline {
   padding: 0.5rem 1.2rem;
@@ -1206,7 +1188,7 @@ body {
     grid-template-columns: 1fr;
   }
 }
-
+/* 
 @media (max-width: 480px) {
   .modal-content {
     padding: 1.5rem;
@@ -1215,12 +1197,44 @@ body {
   .expert-cards {
     grid-template-columns: 1fr;
   }
+} */
+
+@media (max-width: 480px) {
+  .hero-section {
+    padding: 40px 16px 60px;
+  }
+  
+  .hero-section h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  
+  .hero-section p {
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+  
+  .search-box {
+    height: 55px;
+    gap: 8px;
+  }
+  
+  .search-box .icon {
+    width: 18px;
+    height: 18px;
+    font-size: 16px;
+  }
+  
+  .search-box input,
+  .search-box select {
+    font-size: 14px;
+  }
+  
+  .search-btn {
+    height: 50px;
+    font-size: 1rem;
+  }
 }
-
-
-/* headersss */
-
-/* ==================== Shine.com Style Header CSS ==================== */
 
 /* Header Container */
 .header-container {
@@ -1423,13 +1437,15 @@ body {
   transform: translateY(-2px);
 }
 
-/* Hero Section */
 .hero-section {
   width: 100%;
   padding: 60px 20px 80px;
   text-align: center;
   background: linear-gradient(135deg, #0B2B5E 0%, #1B4A7A 50%, #2C6280 100%);
-  /* background: linear-gradient(135deg, #94959e 0%, #764ba2 100%); */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .hero-section h1 {
@@ -1439,18 +1455,6 @@ body {
   font-weight: 700;
 }
 
-/* Search Container */
-/* .search-container {
-  width: 75%;
-  margin: auto;
-
-  display: flex;
-  align-items: center;
-  padding: 18px;
-  border-radius: 22px;
-
-  gap: 20px;
-} */
 
 .search-box {
   flex: 1;
@@ -2379,8 +2383,9 @@ body {
   margin-bottom: 40px;
 }
 
+
 .search-container {
-  width: 1000px;
+  width: 100%;
   max-width: 947px;
   margin: auto;
 
@@ -2394,13 +2399,16 @@ body {
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
 }
 
+
 .search-box {
   flex: 1;
   display: flex;
   align-items: center;
+  gap: 12px;
   padding: 0 20px;
+  height: 70px;
+  background: white;
   border-right: 1px solid #e5e5e5;
-  height: 75px;
 }
 
 .search-box:last-child {
@@ -2412,32 +2420,68 @@ body {
   margin-right: 10px;
   font-size: 18px;
 }
-
-.search-box input,
+.search-box .icon {
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  font-size: 20px;
+  color: #5a6e7c;
+  margin: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+/* .search-box input,
 .search-box select {
   width: 100%;
   border: none;
   outline: none;
   font-size: 1rem;
   background: transparent;
+} */
+.search-box select {
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0 center;
+  background-size: 14px;
+  padding-right: 20px;
+}
+.search-box input,
+.search-box select {
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  color: #1a2c3e;
+  font-weight: 500;
 }
 
+
+/* Search button – fixed width, same height as search boxes */
 .search-btn {
   width: 180px;
-  height: 75px;
+  height: 70px;
   border: none;
-  cursor: pointer;
- background: linear-gradient(135deg, #1B4A7A 0%, #0B2B5E 100%);
-  /* background: #f4c400; */
-  color: #222;
+  background: linear-gradient(135deg, #1B4A7A 0%, #0B2B5E 100%);
+  color: white;
   font-size: 1.1rem;
-  font-weight: 600;
-
-  transition: 0.3s;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
 }
 
 .search-btn:hover {
-  background: #e4b800;
+  background: linear-gradient(135deg, #2C6280 0%, #1B4A7A 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(27, 74, 122, 0.3);
 }
 /* =========================
    RESPONSIVE
