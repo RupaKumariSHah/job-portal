@@ -662,7 +662,7 @@ console.log("Currentttttt URL:", locations.pathname);
         <nav className="navbar-enhanced">
           <div className="nav-left">
             <div className="logo-enhanced" onClick={handleBackToHome} style={{ cursor: 'pointer' }}>
-              Krishna<span>.com</span>
+              Ummeed<span>.com</span>
             </div>
             <div className="nav-links-enhanced">
               <a href="#" onClick={(e) => { e.preventDefault(); handleBackToHome(); }}>Home</a>
@@ -838,7 +838,7 @@ console.log("Currentttttt URL:", locations.pathname);
       {/* Navbar */}
       <nav className="navbar-enhanced">
         <div className="nav-left">
-          <div className="logo-enhanced" onClick={() => navigate('/')} style={{ cursor: 'pointer' }}>Krishna<span>.com</span></div>
+          <div className="logo-enhanced" onClick={() => navigate('/')} style={{ cursor: 'pointer' }}><span>.com</span></div>
           <div className="nav-links-enhanced">
             <a href="#" onClick={(e) => { e.preventDefault(); navigate('/'); }}>Home</a>
             <a href="#" onClick={(e) => { e.preventDefault(); }}>Jobs</a>
@@ -993,8 +993,8 @@ console.log("Currentttttt URL:", locations.pathname);
       <section className="app-enhanced">
         <div className="app-card">
           <div className="app-info">
-            <div className="app-logo">Krishna<span>.com</span></div>
-            <h2>Get the Krishna App Now!</h2>
+            <div className="app-logo">Ummeed<span>.com</span></div>
+            <h2>Get the UmmeedApp Now!</h2>
             <p>Access lakhs of jobs and apply instantly from anywhere.</p>
             <div className="app-stats">
               <div><h3>4.8 ★</h3><span>App Rating</span></div>
@@ -1005,7 +1005,7 @@ console.log("Currentttttt URL:", locations.pathname);
           </div>
           <div className="app-qr">
             <div className="scan-tag">SCAN & DOWNLOAD</div>
-            <div className="qr-box"><img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=https://krishna-job-portal.com" alt="QR" /></div>
+            <div className="qr-box"><img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=https://Ummeed-job-portal.com" alt="QR" /></div>
           </div>
         </div>
       </section>

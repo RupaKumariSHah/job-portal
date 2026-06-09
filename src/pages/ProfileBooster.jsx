@@ -52,7 +52,7 @@ function ProfileBooster() {
             </div>
 
             <div>
-              <h2 className="pb-logo-text">Krishna</h2>
+              <h2 className="pb-logo-text">Ummeed</h2>
               <p className="pb-logo-subtext">JOB PORTAL</p>
             </div>
 

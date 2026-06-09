@@ -43,7 +43,7 @@ function RecruiterPage() {
           </div>
 
           <div>
-            <h2 className="rp-logo-text">Krishna</h2>
+            <h2 className="rp-logo-text">Ummeed</h2>
           </div>
 
         </div>
@@ -76,7 +76,7 @@ function RecruiterPage() {
 
             <div>
               <h4>8010062222</h4>
-              <p>recruiterservices@Krishna.com</p>
+              <p>recruiterservices@Ummeed.com</p>
             </div>
 
           </div>
@@ -205,7 +205,7 @@ function RecruiterPage() {
   <div className="rp-companies-container">
 
     <h2>
-      Top Companies Hiring on Krishna Infotech
+      Top Companies Hiring on Ummeed Infotech
     </h2>
 
     {/* MARQUEE */}
@@ -387,7 +387,7 @@ function RecruiterPage() {
       <div className="rp-insights-container">
         
         {/* Main Heading */}
-        <h1 className="rp-insights-title">Mint + krishna Talent Insights</h1>
+        <h1 className="rp-insights-title">Mint + Ummeed Talent Insights</h1>
 
         {/* Dashboard Grid Content */}
         <div className="rp-insights-grid">
@@ -421,7 +421,7 @@ function RecruiterPage() {
             {/* Sidebar Item 1 */}
             <div className="rp-sidebar-item active">
               <div className="rp-item-details">
-                <h4>Mint + krishna Talent Insights Q4 - 2025</h4>
+                <h4>Mint + Ummeed Talent Insights Q4 - 2025</h4>
                 <div className="rp-item-meta">
                   <span>👁️ 523</span>
                 </div>
@@ -432,7 +432,7 @@ function RecruiterPage() {
             {/* Sidebar Item 2 */}
             <div className="rp-sidebar-item">
               <div className="rp-item-details">
-                <h4>Mint + Shine Talent Insights Q3 - 2024</h4>
+                <h4>Mint + Ummeed Talent Insights Q3 - 2024</h4>
                 <div className="rp-item-meta">
                   <span>👁️ 456</span>
                 </div>

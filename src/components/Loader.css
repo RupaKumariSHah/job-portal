@@ -1,0 +1,238 @@
+/* Sky Arena - Main Container (Fullscreen Flex Centered) */
+.sky-arena {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(ellipse at center, #0a0f2a 0%, #03050b 100%);
+  overflow: hidden;
+  z-index: 9999;
+  transition: opacity 0.8s ease-out;
+}
+
+.sky-arena.exit {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Nebula Drift Background */
+.nebula-drift {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 30% 40%, rgba(102, 126, 234, 0.15) 0%, transparent 50%),
+              radial-gradient(circle at 70% 60%, rgba(118, 75, 162, 0.15) 0%, transparent 50%);
+  animation: nebulaPulse 8s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes nebulaPulse {
+  0%, 100% { opacity: 0.5; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.05); }
+}
+
+/* Star Voyager Layer (full background) */
+.star-voyager {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+/* Traveling Stars */
+.traveling-star {
+  position: absolute;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0 0 4px rgba(255, 255, 255, 0.8);
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  animation: starTravel var(--dur) var(--del) cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes starTravel {
+  0% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(var(--tx), var(--ty));
+    opacity: 0;
+  }
+}
+
+/* Celestial Core Container – now centered by parent flexbox */
+.celestial-manifest {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;  /* so that absolute children (aura, rings) position relative to this */
+  width: 200px;
+  height: 200px;
+  z-index: 10;
+}
+
+/* Core Aura – centered inside .celestial-manifest */
+.core-aura {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 180px;
+  height: 180px;
+  background: radial-gradient(circle, rgba(102, 126, 234, 0.4) 0%, rgba(118, 75, 162, 0.2) 50%, transparent 70%);
+  border-radius: 50%;
+  animation: auraPulse 2s ease-in-out infinite;
+}
+
+@keyframes auraPulse {
+  0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.5; }
+  50% { transform: translate(-50%, -50%) scale(1.2); opacity: 0.8; }
+}
+
+/* Orbital Ring System – centered */
+.orbital-ring-system {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 200px;
+  animation: rotateSystem 8s linear infinite;
+}
+
+@keyframes rotateSystem {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+.satellite {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(102, 126, 234, 0.8);
+}
+
+.satellite.p1 {
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: orbit1 4s linear infinite;
+}
+
+.satellite.p2 {
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: orbit2 4s linear infinite reverse;
+}
+
+@keyframes orbit1 {
+  0% { transform: translateX(-50%) translateY(0); }
+  25% { transform: translateX(-50%) translateY(-15px); }
+  75% { transform: translateX(-50%) translateY(15px); }
+  100% { transform: translateX(-50%) translateY(0); }
+}
+
+@keyframes orbit2 {
+  0% { transform: translateX(-50%) translateY(0); }
+  25% { transform: translateX(-50%) translateY(15px); }
+  75% { transform: translateX(-50%) translateY(-15px); }
+  100% { transform: translateX(-50%) translateY(0); }
+}
+
+/* Logo Sigil – centered and floating */
+.logo-sigil {
+  display: block;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  animation: logoGlow 2s ease-in-out infinite, logoFloat 3s ease-in-out infinite;
+  z-index: 5;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  padding: 10px;
+  margin: 0 auto;
+}
+
+@keyframes logoGlow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(102, 126, 234, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(102, 126, 234, 0.8), 0 0 60px rgba(118, 75, 162, 0.6);
+  }
+}
+
+@keyframes logoFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Loading Text (optional, currently commented in JSX) */
+.loading-text {
+  margin-top: 30px;
+  color: white;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  opacity: 0.8;
+  animation: textPulse 1.5s ease-in-out infinite;
+  text-align: center;
+}
+
+@keyframes textPulse {
+  0%, 100% { 
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  50% { 
+    opacity: 1;
+    transform: scale(1.05);
+    letter-spacing: 5px;
+  }
+}
+
+/* Responsive adjustments – everything stays centered */
+@media (max-width: 768px) {
+  .celestial-manifest {
+    width: 150px;
+    height: 150px;
+  }
+  .core-aura {
+    width: 130px;
+    height: 130px;
+  }
+  .orbital-ring-system {
+    width: 150px;
+    height: 150px;
+  }
+  .logo-sigil {
+    width: 70px;
+    height: 70px;
+  }
+  .loading-text {
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+  }
+}

@@ -333,7 +333,7 @@ export default function JobPortalEnhanced() {
   const NavbarWithDropdowns = () => (
     <div className="navbar">
       <div className="logo" onClick={() => navigate('/')} style={{ cursor: 'pointer' }}>
-        Krishna<span>.com</span>
+        Ummeed<span>.com</span>
       </div>
       
       <div className="nav-links">
@@ -462,16 +462,49 @@ export default function JobPortalEnhanced() {
     <div className="job-portal-enhanced">
       <div className="header-container">
         <NavbarWithDropdowns />
-        <div className="hero-section">
-          <h1>Discover 5 Lakh+ Job Opportunities</h1>
-          <div className="search-container">
-             <div className="hero-searchbar_hero-searchbar-separator__6h4F6"></div>
-            <div className="search-box"><FaBriefcase className="icon" /><input type="text" placeholder="Enter Skills/Roles" value={skill} onChange={handleSkillSearch} />{filteredSkills.length > 0 && (<div className="dropdown">{filteredSkills.map((item, index) => (<div key={index} className="dropdown-item" onClick={() => { setSkill(item); setFilteredSkills([]); }}>{item}</div>))}</div>)}</div>
-            <div className="search-box"><FaMapMarkerAlt className="icon" /><input type="text" placeholder="Enter Location" value={location} onChange={handleLocationSearch} />{filteredLocations.length > 0 && (<div className="dropdown">{filteredLocations.map((item, index) => (<div key={index} className="dropdown-item" onClick={() => { setLocation(item); setFilteredLocations([]); }}>{item}</div>))}</div>)}</div>
-            <div className="search-box experience-box"><FaChartLine className="icon" /><select value={experience} onChange={(e) => setExperience(e.target.value)} className="experience-select"><option value="">Select Experience</option>{experienceData.map((exp, index) => (<option key={index} value={exp}>{exp}</option>))}</select></div>
-            <button className="search-btn" onClick={handleSearchClick}>Search Jobs →</button>
-          </div>
-        </div>
+ <div className="hero-section">
+  <h1>Search Your Dream Job</h1>
+  <p>Discover 5 Lakh+ Job Opportunities</p>
+
+  <div className="search-container">
+    <div className="search-box">
+      <FaBriefcase className="icon" />
+      <input
+        type="text"
+        placeholder="Enter Skills/Roles"
+        value={skill}
+        onChange={handleSkillSearch}
+      />
+    </div>
+
+    <div className="search-box">
+      <FaChartLine className="icon" />
+      <select
+        value={experience}
+        onChange={(e) => setExperience(e.target.value)}
+      >
+        <option value="">Select Experience</option>
+        {experienceData.map((exp, index) => (
+          <option key={index} value={exp}>
+            {exp}
+          </option>
+        ))}
+      </select>
+    </div>
+
+    <div className="search-box">
+      <FaMapMarkerAlt className="icon" />
+      <input
+        type="text"
+        placeholder="Enter Location"
+        value={location}
+        onChange={handleLocationSearch}
+      />
+    </div>
+
+    <button className="search-btn">Search</button>
+  </div>
+</div>
       
       </div>
 
@@ -489,7 +522,7 @@ export default function JobPortalEnhanced() {
 
       <section className="cta-enhanced"><div className="cta-card"><div className="cta-text"><h3>Find Your Perfect Career Match</h3><p>Build a professional profile, explore jobs from top companies, and get hired faster with AI-powered recommendations.</p><button>Explore Jobs →</button></div><div className="cta-circle"><div className="emoji">👨‍💼</div></div></div></section>
 
-      <section className="app-enhanced"><div className="app-card"><div className="app-info"><div className="app-logo">Krishna<span>.com</span></div><h2>Get the Krishna App Now!</h2><p>Access lakhs of jobs and apply instantly from anywhere.</p><div className="app-stats"><div><h3>4.8 ★</h3><span>App Rating</span></div><div className="divider"></div><div><h3>10M+</h3><span>Downloads</span></div><div className="store-buttons">📱 ▶️</div></div></div><div className="app-qr"><div className="scan-tag">SCAN & DOWNLOAD</div><div className="qr-box"><img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=https://krishna-job-portal.com" alt="QR" /></div></div></div></section>
+      <section className="app-enhanced"><div className="app-card"><div className="app-info"><div className="app-logo">Ummeed<span>.com</span></div><h2>Get the Ummeed App Now!</h2><p>Access lakhs of jobs and apply instantly from anywhere.</p><div className="app-stats"><div><h3>4.8 ★</h3><span>App Rating</span></div><div className="divider"></div><div><h3>10M+</h3><span>Downloads</span></div><div className="store-buttons">📱 ▶️</div></div></div><div className="app-qr"><div className="scan-tag">SCAN & DOWNLOAD</div><div className="qr-box"><img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=https://ummeed-job-portal.com" alt="QR" /></div></div></div></section>
 
       <section className="expert-reels-section"><div className="expert-header"><div><h2>Finconcept Edge Reels</h2><div className="expert-tabs"><button className="active-tab">Sales and Marketing</button><button>IT & Software</button><button>BFSI</button></div></div><div className="expert-arrows"><button>←</button><button>→</button></div></div><div className="expert-cards"><div className="expert-card"><img src="https://randomuser.me/api/portraits/men/32.jpg" alt="expert" /><div className="expert-content"><h3>Leadership in Sales - From Ground level...</h3><p>Vice President, Sales, Finconcept Pvt Ltd</p></div><button className="play-btn">▶</button></div><div className="expert-card"><img src="https://randomuser.me/api/portraits/women/44.jpg" alt="expert" /><div className="expert-content"><h3>Sales Leadership 101 - What it takes to...</h3><p>Vice President Sales · Finconcept Life</p></div><button className="play-btn">▶</button></div></div><div className="view-all-wrapper"><button className="view-all-btn">View All</button></div></section>
 
