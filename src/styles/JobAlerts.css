@@ -434,7 +434,7 @@
 
 .footer-column h3 {
   font-size: 18px;
-  color: #1f2b4d;
+  /* color: #1f2b4d; */
   margin-bottom: 20px;
   font-weight: 800;
   letter-spacing: 0.5px;
@@ -461,7 +461,7 @@
 
 .footer-column ul li {
   font-size: 14px;
-  color: #6b7280;
+  /* color: #6b7280; */
   margin-bottom: 12px;
   cursor: pointer;
   transition: all 0.3s ease;

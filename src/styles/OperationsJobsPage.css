@@ -265,7 +265,7 @@
   animation: pulse 2s infinite;
 }
 
-/* Shine effect on active item */
+/* umeed effect on active item */
 .breadcrumb span.active::after {
   content: '';
   position: absolute;
@@ -278,7 +278,7 @@
     rgba(255, 255, 255, 0.4), 
     transparent
   );
-  animation: shine 3s infinite;
+  animation: umeed 3s infinite;
   pointer-events: none;
 }
 
@@ -435,7 +435,7 @@
   }
 }
 
-@keyframes shine {
+@keyframes umeed {
   0% {
     left: -100%;
   }

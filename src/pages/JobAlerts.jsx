@@ -184,7 +184,7 @@ const JobAlerts = () => {
             Looking for the perfect job can sometimes feel tiring. But what if you
             could turn the odds in your favour? Imagine receiving real-time updates
             about jobs that align with your skills and career aspirations. Use
-            Shine.com's Free Job Alert Service – your ultimate job search companion.
+            umeed.com's Free Job Alert Service – your ultimate job search companion.
           </p>
 
           <h2>What is a Free Job Alert?</h2>
@@ -263,7 +263,7 @@ const JobAlerts = () => {
 
       <p>Great career starts here!</p>
 
-      <h4>Download Shine App</h4>
+      <h4>Download umeed App</h4>
 
       <div className="footer-app-icons">
 
@@ -367,7 +367,7 @@ const JobAlerts = () => {
       <ul>
 
         <li>080-1006 2222</li>
-        <li>contactus@shine.com</li>
+        <li>contactus@umeed.com</li>
 
       </ul>
 

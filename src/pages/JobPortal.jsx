@@ -330,75 +330,88 @@ export default function JobPortalEnhanced() {
 
   const eventModalContent = getEventModalContent();
 
-  // Reusable Navbar Component with HOVER Dropdowns - MODIFIED JOB ALERTS SECTION
+   // ========== NEW RESPONSIVE NAVBAR WITH HAMBURGER ==========
   const NavbarWithDropdowns = () => (
-    <div className="navbar">
-      <div className="logo" onClick={() => navigate('/')} style={{ cursor: 'pointer' }}>
-        Ummeed<span>.com</span>
-      </div>
-      
-      <div className="nav-links">
-        {/* Services Dropdown - HOVER */}
-        <div 
-          className="nav-dropdown"
-          onMouseEnter={() => handleMouseEnter('services')}
-          onMouseLeave={handleMouseLeave}
-        >
-          <p className={openDropdown === 'services' ? 'active' : ''}>
-            Services {openDropdown === 'services' ? '▲' : '▼'}
-          </p>
-          {openDropdown === 'services' && (
-            <div className="dropdown-menu">
-              {serviceMenuItems.map((item) => (
-                <div key={item.id} className="dropdown-item" onClick={() => handleMenuItemClick(item.path, item.label)}>
-                  <span className="dropdown-icon">{item.icon}</span>
-                  <div className="dropdown-content">
-                    <div className="dropdown-label">{item.label}</div>
-                    <div className="dropdown-description">{item.description}</div>
-                  </div>
+    <>
+      <div className="navbar-main">
+        <div className="logo" onClick={() => navigate('/')} style={{ cursor: 'pointer' }}>
+          Ummeed<span>.com</span>
+        </div>
+
+        {/* Hamburger icon (mobile only) */}
+        <div className={`hamburger-menu ${mobileMenuOpen ? 'open' : ''}`} onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
+          <span className="bar"></span>
+          <span className="bar"></span>
+          <span className="bar"></span>
+        </div>
+
+        {/* Desktop & mobile menu wrapper */}
+        <div className={`mobile-nav-container ${mobileMenuOpen ? 'mobile-open' : ''}`}>
+          <div className="nav-links-main">
+            {/* Services Dropdown */}
+            <div 
+              className="nav-dropdown"
+              onMouseEnter={() => handleMouseEnter('services')}
+              onMouseLeave={handleMouseLeave}
+            >
+              <p className={openDropdown === 'services' ? 'active' : ''}>
+                Services {openDropdown === 'services' ? '▲' : '▼'}
+              </p>
+              {openDropdown === 'services' && (
+                <div className="dropdown-menu">
+                  {serviceMenuItems.map((item) => (
+                    <div key={item.id} className="dropdown-item" onClick={() => handleMenuItemClick(item.path, item.label)}>
+                      <span className="dropdown-icon">{item.icon}</span>
+                      <div className="dropdown-content">
+                        <div className="dropdown-label">{item.label}</div>
+                        <div className="dropdown-description">{item.description}</div>
+                      </div>
+                    </div>
+                  ))}
                 </div>
-              ))}
+              )}
             </div>
-          )}
-        </div>
 
-        {/* Job Alerts - NOW A DIRECT CLICK (NO DROPDOWN) */}
-        <div className="nav-link-direct">
-          <p onClick={handleJobAlertsClick} style={{ cursor: 'pointer' }}>
-            Job Alerts
-          </p>
-        </div>
+            {/* Job Alerts */}
+            <div className="nav-link-direct">
+              <p onClick={handleJobAlertsClick} style={{ cursor: 'pointer' }}>
+                Job Alerts
+              </p>
+            </div>
 
-        {/* Blogs Dropdown - HOVER */}
-        <div 
-          className="nav-dropdown"
-          onMouseEnter={() => handleMouseEnter('blogs')}
-          onMouseLeave={handleMouseLeave}
-        >
-          <p className={openDropdown === 'blogs' ? 'active' : ''}>
-            Blogs {openDropdown === 'blogs' ? '▲' : '▼'}
-          </p>
-          {openDropdown === 'blogs' && (
-            <div className="dropdown-menu">
-              {blogsMenuItems.map((item) => (
-                <div key={item.id} className="dropdown-item" onClick={() => handleMenuItemClick(item.path, item.label)}>
-                  <span className="dropdown-icon">{item.icon}</span>
-                  <div className="dropdown-content">
-                    <div className="dropdown-label">{item.label}</div>
-                    <div className="dropdown-description">{item.description}</div>
-                  </div>
+            {/* Blogs Dropdown */}
+            <div 
+              className="nav-dropdown"
+              onMouseEnter={() => handleMouseEnter('blogs')}
+              onMouseLeave={handleMouseLeave}
+            >
+              <p className={openDropdown === 'blogs' ? 'active' : ''}>
+                Blogs {openDropdown === 'blogs' ? '▲' : '▼'}
+              </p>
+              {openDropdown === 'blogs' && (
+                <div className="dropdown-menu">
+                  {blogsMenuItems.map((item) => (
+                    <div key={item.id} className="dropdown-item" onClick={() => handleMenuItemClick(item.path, item.label)}>
+                      <span className="dropdown-icon">{item.icon}</span>
+                      <div className="dropdown-content">
+                        <div className="dropdown-label">{item.label}</div>
+                        <div className="dropdown-description">{item.description}</div>
+                      </div>
+                    </div>
+                  ))}
                 </div>
-              ))}
+              )}
             </div>
-          )}
+          </div>
+
+          <div className="nav-buttons">
+            <button className="register-btn" onClick={() => setShowRegisterModal(true)}>Register</button>
+            <button className="login-btn" onClick={() => setShowLoginModal(true)}>Login</button>
+          </div>
         </div>
       </div>
-
-      <div className="nav-buttons">
-        <button className="register-btn" onClick={() => setShowRegisterModal(true)}>Register</button>
-        <button className="login-btn" onClick={() => setShowLoginModal(true)}>Login</button>
-      </div>
-    </div>
+      {mobileMenuOpen && <div className="menu-overlay-responsive" onClick={() => setMobileMenuOpen(false)}></div>}
+    </>
   );
 
   // Render Jobs Page if a category is selected
@@ -611,7 +624,7 @@ export default function JobPortalEnhanced() {
 
     <h2>Trending Blogs</h2>
 
-    <div className="blog-arrows">
+    {/* <div className="blog-arrows">
       <button>
         <i className="fa-solid fa-arrow-left"></i>
       </button>
@@ -619,7 +632,7 @@ export default function JobPortalEnhanced() {
       <button>
         <i className="fa-solid fa-arrow-right"></i>
       </button>
-    </div>
+    </div> */}
 
   </div>
 
@@ -643,7 +656,7 @@ export default function JobPortalEnhanced() {
 
           <div className="author">
             <div className="author-dot"></div>
-            <span>By Shine Editorial Team</span>
+            <span>By umeed Editorial Team</span>
           </div>
         </div>
 
@@ -682,7 +695,7 @@ export default function JobPortalEnhanced() {
         <div>
           <h3>
             salary hike in internal promotion vs
-            job switch - Learning.Shine
+            job switch - Learning.umeed
           </h3>
 
           <p className="blog-category">
@@ -809,8 +822,8 @@ export default function JobPortalEnhanced() {
     {/* Left */}
     <div className="download-card">
       <div>
-        <h2>Download Shine App</h2>
-        <p>Get the latest job updates instantly on the Shine App</p>
+        <h2>Download umeed App</h2>
+        <p>Get the latest job updates instantly on the umeed App</p>
       </div>
 
       <button>
@@ -847,7 +860,7 @@ export default function JobPortalEnhanced() {
   {/* Bottom */}
   <div className="footer-bottom">
 
-    <p>© 2026 Shine.com | All Right Reserved</p>
+    <p>© 2026 umeed.com | All Right Reserved</p>
 
     <div className="bottom-links">
       <span>T&C</span>
@@ -865,6 +878,7 @@ export default function JobPortalEnhanced() {
     </div>
   </div>
 </footer>
+
       {showSuccessToast && <div className="toast-notification">{toastMessage}</div>}
       {showRegisterModal && (<div className="modal-overlay" onClick={handleBackdropClick(setShowRegisterModal)}><div className="modal-content"><button className="modal-close" onClick={() => setShowRegisterModal(false)}>×</button><h2>Create Account</h2><form onSubmit={handleRegisterSubmit}><input type="text" name="name" placeholder="Full Name" value={registerData.name} onChange={handleRegisterChange} required /><input type="email" name="email" placeholder="Email" value={registerData.email} onChange={handleRegisterChange} required /><input type="password" name="password" placeholder="Password" value={registerData.password} onChange={handleRegisterChange} required /><select name="userType" value={registerData.userType} onChange={handleRegisterChange}><option value="jobseeker">Job Seeker</option><option value="recruiter">Recruiter</option><option value="other">Franchise</option></select><button type="submit" className="submit-btn">Register</button></form><p className="modal-footer">Already have an account? <span onClick={() => { setShowRegisterModal(false); setShowLoginModal(true); }}>Login</span></p></div></div>)}
       {showLoginModal && (<div className="modal-overlay" onClick={handleBackdropClick(setShowLoginModal)}><div className="modal-content"><button className="modal-close" onClick={() => setShowLoginModal(false)}>×</button><h2>Welcome Back</h2><form onSubmit={handleLoginSubmit}><input type="email" name="email" placeholder="Email" value={loginData.email} onChange={handleLoginChange} required /><input type="password" name="password" placeholder="Password" value={loginData.password} onChange={handleLoginChange} required /><button type="submit" className="submit-btn">Login</button></form><p className="modal-footer">Don't have an account? <span onClick={() => { setShowLoginModal(false); setShowRegisterModal(true); }}>Register</span></p></div></div>)}
